@@ -1,0 +1,43 @@
+
+sytax = "proto3";
+
+package task;
+
+service TaskService {
+
+    rpc CreateTask ( CreateTaskRequest ) returns ( CreateTaskResponse ):
+    rpc GetTask ( GetTaskRequest ) returns ( GetTaskResponse );
+    rpc ListTasks ( ListTasksRequest ) returns ( ListTasksResponse );
+}
+
+message CreateTaskRequest {
+    string user_id = 1;
+    string title = 2;
+    string description = 3
+}
+
+message CreateTaskResponse {
+
+    string message = 1;
+    string task_id = 2;
+}
+
+
+message GetTaskRequest{
+    string task_id = 1;
+}
+
+message GetTaskResponse {
+    string task_id = 1;
+    string title = 2;
+    string description = 3;
+}
+
+message ListTasksRequest {}
+
+
+message Task {
+    string task_id = 1;
+    string title  = 1;
+    string description = 3;
+}
