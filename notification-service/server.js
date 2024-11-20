@@ -23,6 +23,7 @@ server.addService(notificationProto.NotificationService.service ,
 
 const port = 3333;
 
+//server creation
 server.bindAsync(
     `127.0.0.1:${port}`,
     grpc.ServerCredentials.createInsecure(),
