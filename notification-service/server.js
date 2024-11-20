@@ -7,7 +7,7 @@ const PROTO_PATH=path.join(__dirname,"proto","notification.proto");
 const packageDefinition = protoLoader.loadSync(PROTO_PATH);
 const notificationProto = grpc.loadPackageDefinition( packageDefinition ).notification;
 
-
+//notification
 const sendNotification = (call, callback) => {
 
     const {user_id , message } = call.request;
