@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "client.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon notification-service/server.js",
+    "dev": "nodemon task-service/server.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +15,7 @@
     "@grpc/grpc-js": "^1.12.2",
     "@grpc/proto-loader": "^0.7.13",
     "express": "^4.21.1",
-    "mongoose": "^8.8.2"
+    "mongoose": "^8.8.2",
+    "nodemon": "^3.1.7"
   }
 }
