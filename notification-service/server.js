@@ -20,7 +20,7 @@ const server = new grpc.Server();
 server.addService(notificationProto.NotificationService.service ,
     { SendNotification: sendNotification });
 
-
+//port mention
 const port = 3333;
 
 //server creation
