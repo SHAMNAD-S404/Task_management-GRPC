@@ -10,6 +10,7 @@ const notificationProto = grpc.loadPackageDefinition(packageDefinition).notifica
 const client = new notificationProto.NotificationService("localhost:3333",grpc.credentials.createInsecure() );
 
 
+//send notification
 const sendNotification = ( user_id , message ) => {
     client.SendNotification( {user_id , message } , (error, response) => {
         if (error) {
